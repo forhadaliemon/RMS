@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Request";
+    Layout = "~/Views/Shared/_LayoutAfter.cshtml";
+}
+<form class="form-horizontal well" method="post">
+    <fieldset>
+        <legend>Request For Collecting Foods</legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">FoodName</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" name="FoodName" placeholder="Enter FoodName" fdprocessedid="q6poca">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Quantity</label>
+            <div class="col-lg-10">
+                <input class="form-control" name="Qty" placeholder="Enter Quantity" fdprocessedid="6qdwu5">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Maximum Preserve Time</label>
+            <div class="col-lg-10">
+                <input class="form-control" name="PreservedTime" placeholder="Preserve Time(Days)" fdprocessedid="6qdwu5">
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</form>
+

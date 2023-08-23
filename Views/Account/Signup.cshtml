@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form class="form-horizontal well" method="post">
+    <fieldset>
+        <legend>Signup</legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" name="Name" placeholder="Name" fdprocessedid="q6poca">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" name="Email" placeholder="Email" fdprocessedid="q6poca">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+                <input type="password" class="form-control" name="Password" placeholder="Password" fdprocessedid="6qdwu5">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg-2 control-label">UserType</label>
+            <div class="col-lg-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="TypeId" id="optionsRadios1" value="2" checked="">
+                        Restaurent Owner
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="TypeId" id="optionsRadios2" value="3">
+                        Employee
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">SignUp</button>
+    </fieldset>
+</form>

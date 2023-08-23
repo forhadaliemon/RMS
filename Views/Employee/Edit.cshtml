@@ -1,0 +1,94 @@
+﻿@model RMS.Data.Request
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAfter.cshtml";
+}
+
+<h2>Edit</h2>
+
+<div>
+    <h4>Request</h4>
+    <hr />
+    <form method="post">
+        <input type="text" name="Id" hidden value="@Model.Id" />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FoodName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FoodName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Qty)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Qty)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PreservedTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PreservedTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RequestedBy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AssignedTo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User1.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StatusId)
+            </dt>
+
+            <dd>
+                @if (ViewBag.StatusIds != null)
+                {
+                    <select name="StatusId">
+                        @{ foreach (var item in ViewBag.StatusIds)
+                            {
+                                <option value="@item.Id">
+                                    @item.Name
+                                </option>
+                            }
+
+                        }
+                    </select>
+                }
+
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RequestedOn)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RequestedOn)
+            </dd>
+
+        </dl>
+        @if (ViewBag.StatusIds != null)
+        {
+            <button type="submit" class="btn btn-info">Save</button>
+        }
+    </form>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "RequestList")
+</p>
